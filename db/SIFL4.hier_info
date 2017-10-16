@@ -1,6 +1,8 @@
 |SIFL4
 jump <= Manage:inst12.jumpCommand
 C => Manage:inst12.CLK
+C => inst7.IN0
+C => inst6.IN1
 Res[0] <= Manage:inst12.Res4[0]
 Res[1] <= Manage:inst12.Res4[1]
 Res[2] <= Manage:inst12.Res4[2]
@@ -9,6 +11,7 @@ Res[4] <= Manage:inst12.Res4[4]
 mov <= Manage:inst12.movCommand
 readRam <= inst6.DB_MAX_OUTPUT_PORT_TYPE
 SFLAG <= Manage:inst12.SFLAG
+ROMClock <= inst7.DB_MAX_OUTPUT_PORT_TYPE
 AR[0] <= AX[0].DB_MAX_OUTPUT_PORT_TYPE
 AR[1] <= AX[1].DB_MAX_OUTPUT_PORT_TYPE
 AR[2] <= AX[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -61,6 +64,10 @@ manageData[4] <= lpm_or3:inst11.result[4]
 manageData[5] <= lpm_or3:inst11.result[5]
 manageData[6] <= lpm_or3:inst11.result[6]
 manageData[7] <= lpm_or3:inst11.result[7]
+RAMAdres[0] <= Manage:inst12.adres[0]
+RAMAdres[1] <= Manage:inst12.adres[1]
+RAMAdres[2] <= Manage:inst12.adres[2]
+RAMAdres[3] <= Manage:inst12.adres[3]
 RAMDATA[0] <= lpm_ram_dq3:inst3.q[0]
 RAMDATA[1] <= lpm_ram_dq3:inst3.q[1]
 RAMDATA[2] <= lpm_ram_dq3:inst3.q[2]
@@ -77,6 +84,10 @@ readCommand[4] <= lpm_rom3:inst.q[4]
 readCommand[5] <= lpm_rom3:inst.q[5]
 readCommand[6] <= lpm_rom3:inst.q[6]
 readCommand[7] <= lpm_rom3:inst.q[7]
+RomAdres[0] <= Manage:inst12.IP[0]
+RomAdres[1] <= Manage:inst12.IP[1]
+RomAdres[2] <= Manage:inst12.IP[2]
+RomAdres[3] <= Manage:inst12.IP[3]
 
 
 |SIFL4|Manage:inst12
@@ -330,112 +341,16 @@ QA <= 34.DB_MAX_OUTPUT_PORT_TYPE
 |SIFL4|Manage:inst12|IP:inst8
 jump <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 C => inst10.IN0
-C => lpm_dff4:inst.clock
 C => lpm_counter1:inst19.clock
 other => inst10.IN1
-IP[0] <= lpm_dff4:inst.q[0]
-IP[1] <= lpm_dff4:inst.q[1]
-IP[2] <= lpm_dff4:inst.q[2]
-IP[3] <= lpm_dff4:inst.q[3]
+IP[0] <= Count[0].DB_MAX_OUTPUT_PORT_TYPE
+IP[1] <= Count[1].DB_MAX_OUTPUT_PORT_TYPE
+IP[2] <= Count[2].DB_MAX_OUTPUT_PORT_TYPE
+IP[3] <= Count[3].DB_MAX_OUTPUT_PORT_TYPE
 OtherAdres[0] => BUSMUX:inst2.datab[0]
 OtherAdres[1] => BUSMUX:inst2.datab[1]
 OtherAdres[2] => BUSMUX:inst2.datab[2]
 OtherAdres[3] => BUSMUX:inst2.datab[3]
-
-
-|SIFL4|Manage:inst12|IP:inst8|lpm_dff4:inst
-clock => lpm_ff:lpm_ff_component.clock
-data[0] => lpm_ff:lpm_ff_component.data[0]
-data[1] => lpm_ff:lpm_ff_component.data[1]
-data[2] => lpm_ff:lpm_ff_component.data[2]
-data[3] => lpm_ff:lpm_ff_component.data[3]
-q[0] <= lpm_ff:lpm_ff_component.q[0]
-q[1] <= lpm_ff:lpm_ff_component.q[1]
-q[2] <= lpm_ff:lpm_ff_component.q[2]
-q[3] <= lpm_ff:lpm_ff_component.q[3]
-
-
-|SIFL4|Manage:inst12|IP:inst8|lpm_dff4:inst|lpm_ff:lpm_ff_component
-data[0] => dffs[0].DATAIN
-data[1] => dffs[1].DATAIN
-data[2] => dffs[2].DATAIN
-data[3] => dffs[3].DATAIN
-clock => dffs[3].CLK
-clock => dffs[2].CLK
-clock => dffs[1].CLK
-clock => dffs[0].CLK
-enable => dffs[3].ENA
-enable => dffs[2].ENA
-enable => dffs[1].ENA
-enable => dffs[0].ENA
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sload => ~NO_FANOUT~
-q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
-q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2
-dataa[0] => lpm_mux:$00000.data[0][0]
-dataa[1] => lpm_mux:$00000.data[0][1]
-dataa[2] => lpm_mux:$00000.data[0][2]
-dataa[3] => lpm_mux:$00000.data[0][3]
-datab[0] => lpm_mux:$00000.data[1][0]
-datab[1] => lpm_mux:$00000.data[1][1]
-datab[2] => lpm_mux:$00000.data[1][2]
-datab[3] => lpm_mux:$00000.data[1][3]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-result[1] <= lpm_mux:$00000.result[1]
-result[2] <= lpm_mux:$00000.result[2]
-result[3] <= lpm_mux:$00000.result[3]
-
-
-|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2|lpm_mux:$00000
-data[0][0] => mux_8gc:auto_generated.data[0]
-data[0][1] => mux_8gc:auto_generated.data[1]
-data[0][2] => mux_8gc:auto_generated.data[2]
-data[0][3] => mux_8gc:auto_generated.data[3]
-data[1][0] => mux_8gc:auto_generated.data[4]
-data[1][1] => mux_8gc:auto_generated.data[5]
-data[1][2] => mux_8gc:auto_generated.data[6]
-data[1][3] => mux_8gc:auto_generated.data[7]
-sel[0] => mux_8gc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_8gc:auto_generated.result[0]
-result[1] <= mux_8gc:auto_generated.result[1]
-result[2] <= mux_8gc:auto_generated.result[2]
-result[3] <= mux_8gc:auto_generated.result[3]
-
-
-|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2|lpm_mux:$00000|mux_8gc:auto_generated
-data[0] => result_node[0]~7.IN1
-data[1] => result_node[1]~5.IN1
-data[2] => result_node[2]~3.IN1
-data[3] => result_node[3]~1.IN1
-data[4] => result_node[0]~6.IN1
-data[5] => result_node[1]~4.IN1
-data[6] => result_node[2]~2.IN1
-data[7] => result_node[3]~0.IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[3]~0.IN0
-sel[0] => _~0.IN0
-sel[0] => result_node[2]~2.IN0
-sel[0] => _~1.IN0
-sel[0] => result_node[1]~4.IN0
-sel[0] => _~2.IN0
-sel[0] => result_node[0]~6.IN0
-sel[0] => _~3.IN0
 
 
 |SIFL4|Manage:inst12|IP:inst8|lpm_counter1:inst19
@@ -509,6 +424,64 @@ sload => counter_cella0.SLOAD
 sload => counter_cella1.SLOAD
 sload => counter_cella2.SLOAD
 sload => counter_cella3.SLOAD
+
+
+|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
+
+
+|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2|lpm_mux:$00000
+data[0][0] => mux_8gc:auto_generated.data[0]
+data[0][1] => mux_8gc:auto_generated.data[1]
+data[0][2] => mux_8gc:auto_generated.data[2]
+data[0][3] => mux_8gc:auto_generated.data[3]
+data[1][0] => mux_8gc:auto_generated.data[4]
+data[1][1] => mux_8gc:auto_generated.data[5]
+data[1][2] => mux_8gc:auto_generated.data[6]
+data[1][3] => mux_8gc:auto_generated.data[7]
+sel[0] => mux_8gc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_8gc:auto_generated.result[0]
+result[1] <= mux_8gc:auto_generated.result[1]
+result[2] <= mux_8gc:auto_generated.result[2]
+result[3] <= mux_8gc:auto_generated.result[3]
+
+
+|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2|lpm_mux:$00000|mux_8gc:auto_generated
+data[0] => result_node[0]~7.IN1
+data[1] => result_node[1]~5.IN1
+data[2] => result_node[2]~3.IN1
+data[3] => result_node[3]~1.IN1
+data[4] => result_node[0]~6.IN1
+data[5] => result_node[1]~4.IN1
+data[6] => result_node[2]~2.IN1
+data[7] => result_node[3]~0.IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[3]~0.IN0
+sel[0] => _~0.IN0
+sel[0] => result_node[2]~2.IN0
+sel[0] => _~1.IN0
+sel[0] => result_node[1]~4.IN0
+sel[0] => _~2.IN0
+sel[0] => result_node[0]~6.IN0
+sel[0] => _~3.IN0
 
 
 |SIFL4|Manage:inst12|FlagsRegister:inst3
