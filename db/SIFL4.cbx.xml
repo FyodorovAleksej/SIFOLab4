@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="SIFL4">
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIFL4|Manage:inst12|IP:inst8|BUSMUX:inst2|lpm_mux:$00000" CBX_FILE_NAME="mux_8gc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIFL4|Manage:inst12|IP:inst8|lpm_counter1:inst19|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_gdi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIFL4|lpm_ram_dq3:inst3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1vb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_h831.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
