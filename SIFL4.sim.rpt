@@ -1,5 +1,5 @@
 Simulator report for SIFL4
-Tue Oct 17 02:07:26 2017
+Tue Oct 17 02:52:47 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -47,9 +47,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 10.0 us      ;
-; Simulation Netlist Size     ; 221 nodes    ;
-; Simulation Coverage         ;      65.63 % ;
-; Total Number of Transitions ; 33836        ;
+; Simulation Netlist Size     ; 231 nodes    ;
+; Simulation Coverage         ;      67.09 % ;
+; Total Number of Transitions ; 36801        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Stratix      ;
 +-----------------------------+--------------+
@@ -108,10 +108,10 @@ Please refer to fitter text-based report (*.fit.rpt) to view logical memory repo
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      65.63 % ;
-; Total nodes checked                                 ; 221          ;
-; Total output ports checked                          ; 224          ;
-; Total output ports with complete 1/0-value coverage ; 147          ;
+; Total coverage as a percentage                      ;      67.09 % ;
+; Total nodes checked                                 ; 231          ;
+; Total output ports checked                          ; 234          ;
+; Total output ports with complete 1/0-value coverage ; 157          ;
 ; Total output ports with no 1/0-value coverage       ; 70           ;
 ; Total output ports with no 1-value coverage         ; 70           ;
 ; Total output ports with no 0-value coverage         ; 77           ;
@@ -132,6 +132,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SIFL4|Res[1]                                                                                                              ; |SIFL4|Res[1]                                                                                                                   ; pin_out          ;
 ; |SIFL4|Res[0]                                                                                                              ; |SIFL4|Res[0]                                                                                                                   ; pin_out          ;
 ; |SIFL4|inst7                                                                                                               ; |SIFL4|inst7                                                                                                                    ; out0             ;
+; |SIFL4|inst20                                                                                                              ; |SIFL4|inst20                                                                                                                   ; out0             ;
+; |SIFL4|inst21                                                                                                              ; |SIFL4|inst21                                                                                                                   ; out0             ;
 ; |SIFL4|inst10                                                                                                              ; |SIFL4|inst10                                                                                                                   ; out0             ;
 ; |SIFL4|inst6                                                                                                               ; |SIFL4|inst6                                                                                                                    ; out0             ;
 ; |SIFL4|inst5                                                                                                               ; |SIFL4|inst5                                                                                                                    ; out0             ;
@@ -139,6 +141,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SIFL4|readRam                                                                                                             ; |SIFL4|readRam                                                                                                                  ; pin_out          ;
 ; |SIFL4|SFLAG                                                                                                               ; |SIFL4|SFLAG                                                                                                                    ; pin_out          ;
 ; |SIFL4|ROMClock                                                                                                            ; |SIFL4|ROMClock                                                                                                                 ; pin_out          ;
+; |SIFL4|ADRESBUS[3]                                                                                                         ; |SIFL4|ADRESBUS[3]                                                                                                              ; pin_out          ;
+; |SIFL4|ADRESBUS[2]                                                                                                         ; |SIFL4|ADRESBUS[2]                                                                                                              ; pin_out          ;
+; |SIFL4|ADRESBUS[1]                                                                                                         ; |SIFL4|ADRESBUS[1]                                                                                                              ; pin_out          ;
+; |SIFL4|ADRESBUS[0]                                                                                                         ; |SIFL4|ADRESBUS[0]                                                                                                              ; pin_out          ;
 ; |SIFL4|CR[7]                                                                                                               ; |SIFL4|CR[7]                                                                                                                    ; pin_out          ;
 ; |SIFL4|CR[3]                                                                                                               ; |SIFL4|CR[3]                                                                                                                    ; pin_out          ;
 ; |SIFL4|CR[1]                                                                                                               ; |SIFL4|CR[1]                                                                                                                    ; pin_out          ;
@@ -162,10 +168,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SIFL4|manageData[2]                                                                                                       ; |SIFL4|manageData[2]                                                                                                            ; pin_out          ;
 ; |SIFL4|manageData[1]                                                                                                       ; |SIFL4|manageData[1]                                                                                                            ; pin_out          ;
 ; |SIFL4|manageData[0]                                                                                                       ; |SIFL4|manageData[0]                                                                                                            ; pin_out          ;
-; |SIFL4|RAMAdres[3]                                                                                                         ; |SIFL4|RAMAdres[3]                                                                                                              ; pin_out          ;
-; |SIFL4|RAMAdres[2]                                                                                                         ; |SIFL4|RAMAdres[2]                                                                                                              ; pin_out          ;
-; |SIFL4|RAMAdres[1]                                                                                                         ; |SIFL4|RAMAdres[1]                                                                                                              ; pin_out          ;
-; |SIFL4|RAMAdres[0]                                                                                                         ; |SIFL4|RAMAdres[0]                                                                                                              ; pin_out          ;
 ; |SIFL4|RAMDATA[7]                                                                                                          ; |SIFL4|RAMDATA[7]                                                                                                               ; pin_out          ;
 ; |SIFL4|RAMDATA[4]                                                                                                          ; |SIFL4|RAMDATA[4]                                                                                                               ; pin_out          ;
 ; |SIFL4|RAMDATA[3]                                                                                                          ; |SIFL4|RAMDATA[3]                                                                                                               ; pin_out          ;
@@ -179,9 +181,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SIFL4|readCommand[2]                                                                                                      ; |SIFL4|readCommand[2]                                                                                                           ; pin_out          ;
 ; |SIFL4|readCommand[1]                                                                                                      ; |SIFL4|readCommand[1]                                                                                                           ; pin_out          ;
 ; |SIFL4|readCommand[0]                                                                                                      ; |SIFL4|readCommand[0]                                                                                                           ; pin_out          ;
-; |SIFL4|RomAdres[2]                                                                                                         ; |SIFL4|RomAdres[2]                                                                                                              ; pin_out          ;
-; |SIFL4|RomAdres[1]                                                                                                         ; |SIFL4|RomAdres[1]                                                                                                              ; pin_out          ;
-; |SIFL4|RomAdres[0]                                                                                                         ; |SIFL4|RomAdres[0]                                                                                                              ; pin_out          ;
 ; |SIFL4|RONWren:inst8|inst4                                                                                                 ; |SIFL4|RONWren:inst8|inst4                                                                                                      ; out0             ;
 ; |SIFL4|RONWren:inst8|inst5                                                                                                 ; |SIFL4|RONWren:inst8|inst5                                                                                                      ; out0             ;
 ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|30                                                                           ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|30                                                                                ; out0             ;
@@ -203,6 +202,17 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SIFL4|BusEnable7:inst13|inst15                                                                                            ; |SIFL4|BusEnable7:inst13|inst15                                                                                                 ; out0             ;
 ; |SIFL4|BusEnable7:inst13|inst16                                                                                            ; |SIFL4|BusEnable7:inst13|inst16                                                                                                 ; out0             ;
 ; |SIFL4|BusEnable7:inst13|inst17                                                                                            ; |SIFL4|BusEnable7:inst13|inst17                                                                                                 ; out0             ;
+; |SIFL4|BusEnable:inst16|inst17                                                                                             ; |SIFL4|BusEnable:inst16|inst17                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst16|inst16                                                                                             ; |SIFL4|BusEnable:inst16|inst16                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst16|inst15                                                                                             ; |SIFL4|BusEnable:inst16|inst15                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst15|inst17                                                                                             ; |SIFL4|BusEnable:inst15|inst17                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst15|inst16                                                                                             ; |SIFL4|BusEnable:inst15|inst16                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst15|inst15                                                                                             ; |SIFL4|BusEnable:inst15|inst15                                                                                                  ; out0             ;
+; |SIFL4|BusEnable:inst15|inst14                                                                                             ; |SIFL4|BusEnable:inst15|inst14                                                                                                  ; out0             ;
+; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[3][1]                                                                ; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[3][1]                                                                     ; out0             ;
+; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[2][1]                                                                ; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[2][1]                                                                     ; out0             ;
+; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[1][1]                                                                ; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[1][1]                                                                     ; out0             ;
+; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[0][1]                                                                ; |SIFL4|lpm_or4:inst17|lpm_or:lpm_or_component|or_node[0][1]                                                                     ; out0             ;
 ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|ram_block1a0                           ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|q_a[0]                                      ; portadataout0    ;
 ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|ram_block1a1                           ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|q_a[1]                                      ; portadataout0    ;
 ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|ram_block1a2                           ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|q_a[2]                                      ; portadataout0    ;
@@ -309,7 +319,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |SIFL4|IP[3]                                                                                                               ; |SIFL4|IP[3]                                                                                                          ; pin_out          ;
 ; |SIFL4|RAMDATA[6]                                                                                                          ; |SIFL4|RAMDATA[6]                                                                                                     ; pin_out          ;
 ; |SIFL4|RAMDATA[5]                                                                                                          ; |SIFL4|RAMDATA[5]                                                                                                     ; pin_out          ;
-; |SIFL4|RomAdres[3]                                                                                                         ; |SIFL4|RomAdres[3]                                                                                                    ; pin_out          ;
 ; |SIFL4|RONWren:inst8|inst2                                                                                                 ; |SIFL4|RONWren:inst8|inst2                                                                                            ; out0             ;
 ; |SIFL4|RONWren:inst8|inst3                                                                                                 ; |SIFL4|RONWren:inst8|inst3                                                                                            ; out0             ;
 ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|32                                                                           ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|32                                                                      ; out0             ;
@@ -343,6 +352,7 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |SIFL4|lpm_ram_dq3:inst3|altsyncram:altsyncram_component|altsyncram_1vb1:auto_generated|ram_block1a6                       ; |SIFL4|lpm_ram_dq3:inst3|altsyncram:altsyncram_component|altsyncram_1vb1:auto_generated|q_a[6]                        ; portadataout0    ;
 ; |SIFL4|BusEnable7:inst13|inst13                                                                                            ; |SIFL4|BusEnable7:inst13|inst13                                                                                       ; out0             ;
 ; |SIFL4|BusEnable7:inst13|inst14                                                                                            ; |SIFL4|BusEnable7:inst13|inst14                                                                                       ; out0             ;
+; |SIFL4|BusEnable:inst16|inst14                                                                                             ; |SIFL4|BusEnable:inst16|inst14                                                                                        ; out0             ;
 ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~0                          ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~0                     ; out0             ;
 ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~1                          ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~1                     ; out0             ;
 ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]                            ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]                       ; out0             ;
@@ -391,7 +401,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |SIFL4|RAMDATA[6]                                                                                                          ; |SIFL4|RAMDATA[6]                                                                                                     ; pin_out          ;
 ; |SIFL4|RAMDATA[5]                                                                                                          ; |SIFL4|RAMDATA[5]                                                                                                     ; pin_out          ;
 ; |SIFL4|readCommand[7]                                                                                                      ; |SIFL4|readCommand[7]                                                                                                 ; pin_out          ;
-; |SIFL4|RomAdres[3]                                                                                                         ; |SIFL4|RomAdres[3]                                                                                                    ; pin_out          ;
 ; |SIFL4|RONWren:inst8|inst2                                                                                                 ; |SIFL4|RONWren:inst8|inst2                                                                                            ; out0             ;
 ; |SIFL4|RONWren:inst8|inst3                                                                                                 ; |SIFL4|RONWren:inst8|inst3                                                                                            ; out0             ;
 ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|32                                                                           ; |SIFL4|RONWren:inst8|Decoder:inst|16dmux:inst|32                                                                      ; out0             ;
@@ -427,6 +436,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |SIFL4|lpm_ram_dq3:inst3|altsyncram:altsyncram_component|altsyncram_1vb1:auto_generated|ram_block1a6                       ; |SIFL4|lpm_ram_dq3:inst3|altsyncram:altsyncram_component|altsyncram_1vb1:auto_generated|q_a[6]                        ; portadataout0    ;
 ; |SIFL4|BusEnable7:inst13|inst13                                                                                            ; |SIFL4|BusEnable7:inst13|inst13                                                                                       ; out0             ;
 ; |SIFL4|BusEnable7:inst13|inst14                                                                                            ; |SIFL4|BusEnable7:inst13|inst14                                                                                       ; out0             ;
+; |SIFL4|BusEnable:inst16|inst14                                                                                             ; |SIFL4|BusEnable:inst16|inst14                                                                                        ; out0             ;
 ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|ram_block1a7                           ; |SIFL4|lpm_rom3:inst|altsyncram:altsyncram_component|altsyncram_h831:auto_generated|q_a[7]                            ; portadataout0    ;
 ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~0                          ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~0                     ; out0             ;
 ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~1                          ; |SIFL4|Manage:inst12|IP:inst8|busmux:inst2|lpm_mux:$00000|mux_8gc:auto_generated|result_node[3]~1                     ; out0             ;
@@ -452,36 +462,36 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Oct 17 02:07:26 2017
+    Info: Processing started: Tue Oct 17 02:52:46 2017
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SIFL4 -c SIFL4
 Info: Using vector source file "E:/SIFOLab4/SIFL4.vwf"
 Info: Overwriting simulation input file with simulation results
     Info: A backup of SIFL4.vwf called SIFL4.sim_ori.vwf has been created in the db folder
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[7]"
-Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[5]"
-Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[4]"
-Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[1]"
-Warning: Found clock-sensitive change during active clock edge at time 135.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]"
-Warning: Found clock-sensitive change during active clock edge at time 135.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[2]"
-Warning: Found clock-sensitive change during active clock edge at time 135.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]"
-Warning: Found clock-sensitive change during active clock edge at time 185.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[3]"
-Warning: Found clock-sensitive change during active clock edge at time 185.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[2]"
-Warning: Found clock-sensitive change during active clock edge at time 255.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[0]"
-Warning: Found clock-sensitive change during active clock edge at time 275.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[4]"
-Warning: Found clock-sensitive change during active clock edge at time 345.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]"
-Warning: Found clock-sensitive change during active clock edge at time 345.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[1]"
-Warning: Found clock-sensitive change during active clock edge at time 345.0 ns on register "|SIFL4|Manage:inst12|FlagsRegister:inst3|inst2"
-Warning: Found clock-sensitive change during active clock edge at time 395.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[6]"
+Warning: Found clock-sensitive change during active clock edge at time 95.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[7]"
+Warning: Found clock-sensitive change during active clock edge at time 95.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[5]"
+Warning: Found clock-sensitive change during active clock edge at time 95.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 95.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[3]"
+Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 115.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[0]"
+Warning: Found clock-sensitive change during active clock edge at time 165.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[3]"
+Warning: Found clock-sensitive change during active clock edge at time 165.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[2]"
+Warning: Found clock-sensitive change during active clock edge at time 235.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[0]"
+Warning: Found clock-sensitive change during active clock edge at time 255.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst3|lpm_ff:lpm_ff_component|dffs[4]"
+Warning: Found clock-sensitive change during active clock edge at time 325.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[7]"
+Warning: Found clock-sensitive change during active clock edge at time 325.0 ns on register "|SIFL4|RONWren:inst8|RON:inst1|lpm_dff3:inst2|lpm_ff:lpm_ff_component|dffs[1]"
+Warning: Found clock-sensitive change during active clock edge at time 325.0 ns on register "|SIFL4|Manage:inst12|FlagsRegister:inst3|inst2"
+Warning: Found clock-sensitive change during active clock edge at time 375.0 ns on register "|SIFL4|Manage:inst12|lpm_dff5:inst7|lpm_ff:lpm_ff_component|dffs[6]"
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      65.63 %
-Info: Number of transitions in simulation is 33836
+Info: Simulation coverage is      67.09 %
+Info: Number of transitions in simulation is 36801
 Info: Vector file SIFL4.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Tue Oct 17 02:07:26 2017
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Tue Oct 17 02:52:47 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

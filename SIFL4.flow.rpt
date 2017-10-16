@@ -1,5 +1,5 @@
 Flow report for SIFL4
-Tue Oct 17 02:00:51 2017
+Tue Oct 17 02:52:33 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,14 +38,14 @@ applicable agreement for further details.
 +--------------------------------------------------------------------+
 ; Flow Summary                                                       ;
 +--------------------------+-----------------------------------------+
-; Flow Status              ; Successful - Tue Oct 17 02:00:51 2017   ;
+; Flow Status              ; Successful - Tue Oct 17 02:52:33 2017   ;
 ; Quartus II Version       ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name            ; SIFL4                                   ;
 ; Top-level Entity Name    ; SIFL4                                   ;
 ; Family                   ; Stratix                                 ;
 ; Met timing requirements  ; N/A                                     ;
-; Total logic elements     ; 82                                      ;
-; Total pins               ; 87                                      ;
+; Total logic elements     ; 88                                      ;
+; Total pins               ; 83                                      ;
 ; Total virtual pins       ; 0                                       ;
 ; Total memory bits        ; 256                                     ;
 ; DSP block 9-bit elements ; 0                                       ;
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/17/2017 02:00:48 ;
+; Start date & time ; 10/17/2017 02:52:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SIFL4               ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 264390077223549.150819484810208 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 264390077223549.150819795004936 ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_FF                          ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_OR                          ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_OR                          ; --            ; --          ; --             ;
@@ -83,6 +83,8 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                       ; LPM_COUNTER                     ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_OR                          ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_OR                          ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_OR                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.1                             ; --            ; --          ; --             ;
@@ -143,6 +145,10 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_or3_inst.vhd                ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_or3.inc                     ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_or3.cmp                     ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_or4.bsf                     ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_or4_inst.vhd                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_or4.inc                     ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_or4.cmp                     ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
@@ -154,8 +160,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 274 MB              ; 00:00:04                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 278 MB              ; 00:00:05                           ;
+; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

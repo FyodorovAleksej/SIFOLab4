@@ -2647,11 +2647,11 @@ VECTOR("E:/SIFOLab4/test.vwf")
 VECTOR("E:/SIFOLab4/SIFL4.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 625000;
+		ZBEGIN = 12500;
+		ZEND = 637500;
 		NUMERATOR = 744;
 		DENOMINATOR = 625000;
-		TOP_INDEX = 18;
+		TOP_INDEX = 37;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -2886,7 +2886,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR";
+		SIGNAL = "data";
 		INDEX = 28;
 		FORMAT = T;
 		SCALE = 1;
@@ -2894,7 +2894,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[7]";
+		SIGNAL = "data[7]";
 		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
@@ -2902,7 +2902,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[6]";
+		SIGNAL = "data[6]";
 		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
@@ -2910,7 +2910,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[5]";
+		SIGNAL = "data[5]";
 		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
@@ -2918,7 +2918,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[4]";
+		SIGNAL = "data[4]";
 		INDEX = 32;
 		FORMAT = E;
 		SCALE = 1;
@@ -2926,7 +2926,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[3]";
+		SIGNAL = "data[3]";
 		INDEX = 33;
 		FORMAT = E;
 		SCALE = 1;
@@ -2934,7 +2934,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[2]";
+		SIGNAL = "data[2]";
 		INDEX = 34;
 		FORMAT = E;
 		SCALE = 1;
@@ -2942,7 +2942,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[1]";
+		SIGNAL = "data[1]";
 		INDEX = 35;
 		FORMAT = E;
 		SCALE = 1;
@@ -2950,7 +2950,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "DR[0]";
+		SIGNAL = "data[0]";
 		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
@@ -2958,23 +2958,23 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "jump";
+		SIGNAL = "DR";
 		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "readCommand";
-		INDEX = 38;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[7]";
+		SIGNAL = "DR[7]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "DR[6]";
 		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
@@ -2982,7 +2982,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[6]";
+		SIGNAL = "DR[5]";
 		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
@@ -2990,7 +2990,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[5]";
+		SIGNAL = "DR[4]";
 		INDEX = 41;
 		FORMAT = E;
 		SCALE = 1;
@@ -2998,7 +2998,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[4]";
+		SIGNAL = "DR[3]";
 		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
@@ -3006,7 +3006,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[3]";
+		SIGNAL = "DR[2]";
 		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
@@ -3014,7 +3014,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[2]";
+		SIGNAL = "DR[1]";
 		INDEX = 44;
 		FORMAT = E;
 		SCALE = 1;
@@ -3022,7 +3022,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[1]";
+		SIGNAL = "DR[0]";
 		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
@@ -3030,64 +3030,8 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "readCommand[0]";
-		INDEX = 46;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res";
-		INDEX = 47;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res[4]";
-		INDEX = 48;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res[3]";
-		INDEX = 49;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res[2]";
-		INDEX = 50;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res[1]";
-		INDEX = 51;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Res[0]";
-		INDEX = 52;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "IP";
-		INDEX = 53;
+		INDEX = 46;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3095,7 +3039,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "IP[3]";
-		INDEX = 54;
+		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3103,7 +3047,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "IP[2]";
-		INDEX = 55;
+		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3111,7 +3055,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "IP[1]";
-		INDEX = 56;
+		INDEX = 49;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3119,95 +3063,15 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "IP[0]";
-		INDEX = 57;
+		INDEX = 50;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mov";
-		INDEX = 58;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "readRam";
-		INDEX = 59;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data";
-		INDEX = 60;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[7]";
-		INDEX = 61;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[6]";
-		INDEX = 62;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[5]";
-		INDEX = 63;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[4]";
-		INDEX = 64;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[3]";
-		INDEX = 65;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[2]";
-		INDEX = 66;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[1]";
-		INDEX = 67;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "data[0]";
-		INDEX = 68;
+		SIGNAL = "jump";
+		INDEX = 51;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3215,7 +3079,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData";
-		INDEX = 69;
+		INDEX = 52;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3223,7 +3087,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[7]";
-		INDEX = 70;
+		INDEX = 53;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3231,7 +3095,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[6]";
-		INDEX = 71;
+		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3239,7 +3103,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[5]";
-		INDEX = 72;
+		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3247,7 +3111,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[4]";
-		INDEX = 73;
+		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3255,7 +3119,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[3]";
-		INDEX = 74;
+		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3263,7 +3127,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[2]";
-		INDEX = 75;
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3271,7 +3135,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[1]";
-		INDEX = 76;
+		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3279,15 +3143,15 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "manageData[0]";
-		INDEX = 77;
+		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SFLAG";
-		INDEX = 78;
+		SIGNAL = "mov";
+		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3295,7 +3159,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA";
-		INDEX = 79;
+		INDEX = 62;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3303,7 +3167,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[7]";
-		INDEX = 80;
+		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3311,7 +3175,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[6]";
-		INDEX = 81;
+		INDEX = 64;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3319,7 +3183,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[5]";
-		INDEX = 82;
+		INDEX = 65;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3327,7 +3191,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[4]";
-		INDEX = 83;
+		INDEX = 66;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3335,7 +3199,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[3]";
-		INDEX = 84;
+		INDEX = 67;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3343,7 +3207,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[2]";
-		INDEX = 85;
+		INDEX = 68;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3351,7 +3215,7 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[1]";
-		INDEX = 86;
+		INDEX = 69;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3359,87 +3223,135 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "RAMDATA[0]";
-		INDEX = 87;
+		INDEX = 70;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RAMAdres";
-		INDEX = 88;
+		SIGNAL = "readCommand";
+		INDEX = 71;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RAMAdres[3]";
-		INDEX = 89;
+		SIGNAL = "readCommand[7]";
+		INDEX = 72;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RAMAdres[2]";
-		INDEX = 90;
+		SIGNAL = "readCommand[6]";
+		INDEX = 73;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RAMAdres[1]";
-		INDEX = 91;
+		SIGNAL = "readCommand[5]";
+		INDEX = 74;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RAMAdres[0]";
-		INDEX = 92;
+		SIGNAL = "readCommand[4]";
+		INDEX = 75;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RomAdres";
-		INDEX = 93;
+		SIGNAL = "readCommand[3]";
+		INDEX = 76;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "readCommand[2]";
+		INDEX = 77;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "readCommand[1]";
+		INDEX = 78;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "readCommand[0]";
+		INDEX = 79;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "readRam";
+		INDEX = 80;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Res";
+		INDEX = 81;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RomAdres[3]";
-		INDEX = 94;
+		SIGNAL = "Res[4]";
+		INDEX = 82;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RomAdres[2]";
-		INDEX = 95;
+		SIGNAL = "Res[3]";
+		INDEX = 83;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RomAdres[1]";
-		INDEX = 96;
+		SIGNAL = "Res[2]";
+		INDEX = 84;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RomAdres[0]";
-		INDEX = 97;
+		SIGNAL = "Res[1]";
+		INDEX = 85;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Res[0]";
+		INDEX = 86;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -3447,7 +3359,55 @@ VECTOR("E:/SIFOLab4/SIFL4.vwf")
 	}
 	LINE{
 		SIGNAL = "ROMClock";
-		INDEX = 98;
+		INDEX = 87;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "SFLAG";
+		INDEX = 88;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ADRESBUS";
+		INDEX = 89;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ADRESBUS[3]";
+		INDEX = 90;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ADRESBUS[2]";
+		INDEX = 91;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ADRESBUS[1]";
+		INDEX = 92;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ADRESBUS[0]";
+		INDEX = 93;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
